@@ -10,17 +10,17 @@ export class Header extends Component {
         return (
             <header>
                 <ul className="movie-list">
-                    {movieTites.map((e, i) => (
+                    {movieTites.map((title, index) => (
                         <li
-                            key={i}
+                            key={index}
                             className={
-                                i == selected
+                                index == selected
                                     ? 'selected movie-title'
                                     : 'movie-title'
                             }
-                            onClick={() => changeSelected(i)}
+                            onClick={() => changeSelected(index)}
                         >
-                            {e}
+                            {title}
                         </li>
                     ))}
                 </ul>

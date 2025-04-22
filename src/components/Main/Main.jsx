@@ -1,28 +1,27 @@
 import {Component} from 'react';
-import './Main.css'
+import './Main.css';
 
 export class Main extends Component {
     render() {
         const actors = this.props.actors;
         const general = this.props.general;
         const plots = this.props.plots;
-        let selected = this.props.selected;
+        const selected = this.props.selected;
 
-        
         return (
             <main>
                 <section className="general-list">
                     <div className="genre-list general-item">
-                        {general[selected].genres.map((e, i) => (
-                            <div key={i} className="genre-item">
-                                {e}
+                        {general[selected].genres.map((genre, index) => (
+                            <div key={index} className="genre-item">
+                                {genre}
                             </div>
                         ))}
                     </div>
                     <div className="studio-list general-item">
-                        {general[selected].studios.map((e, i) => (
-                            <div key={i} className="studio-item">
-                                {e}
+                        {general[selected].studios.map((studio, index) => (
+                            <div key={index} className="studio-item">
+                                {studio}
                             </div>
                         ))}
                     </div>
@@ -34,8 +33,8 @@ export class Main extends Component {
                 <section className="actors">
                     Featuring:{' '}
                     <span className="actors-list">
-                        {actors[selected].map((e, i, a) =>
-                            i + 1 < a.length ? e + ', ' : e
+                        {actors[selected].map((actor, index, actors) =>
+                            index + 1 < actors.length ? actor + ', ' : actor
                         )}
                     </span>
                 </section>
