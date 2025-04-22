@@ -1,8 +1,12 @@
+:root {
+    --root-padding: 2rem;
+}
+
 #root {
     width: 100vw;
     min-height: 100vh;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--root-padding);
     text-align: center;
     display: flex;
     flex-direction: column;

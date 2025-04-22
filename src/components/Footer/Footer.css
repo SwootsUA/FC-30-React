@@ -3,6 +3,7 @@
 }
 
 footer {
+    margin: 0 calc(0px - (var(--root-padding)));
     padding: 15px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
