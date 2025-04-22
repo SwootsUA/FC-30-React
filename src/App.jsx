@@ -84,7 +84,6 @@ class App extends Component {
                     plots={this.state.movies.map(e => e.plot)}
                     actors={this.state.movies.map(e => e.actors)}
                     general={this.state.movies.map(e => e.general)}
-                    changeSelected={this.changeSelected}
                 >
                 </Main>
                 <Footer studio={this.state.studio} />
