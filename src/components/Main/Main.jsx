@@ -3,10 +3,7 @@ import './Main.css';
 
 export class Main extends Component {
     render() {
-        const actors = this.props.actors;
-        const general = this.props.general;
-        const plots = this.props.plots;
-        const selected = this.props.selected;
+        const {actors, general, plots, selected} = this.props;
 
         return (
             <main>

@@ -3,22 +3,24 @@ import './Footer.css';
 
 export class Footer extends Component {
     render() {
+        const {phone, email, address, copyright} = this.props.studio;
+
         return (
             <footer>
                 <div className="contact">
                     Contact Us
                     <p>
                         In mail:{' '}
-                        <a href="mailto:swoots@dev.co">swoots@dev.co</a>
+                        <a href={`mailto:${email}`}>{email}</a>
                     </p>
                     <p>
-                        At phone: <a href="tel:+380951231231">+380951231231</a>
+                        At phone: <a href={`tel:${phone}`}>{phone}</a>
                     </p>
                 </div>
-                <span className="copyright">2025©</span>
+                <span className="copyright">{copyright}©</span>
                 <div>
                     Where to find Us
-                    <address>Ukraine, Beresteiskyi Ave, 44, Kyiv</address>
+                    <address>{address}</address>
                 </div>
             </footer>
         );

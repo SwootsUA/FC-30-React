@@ -3,20 +3,17 @@ import './Header.css';
 
 export class Header extends Component {
     render() {
-        const movieTites = this.props.titles;
-        const selected = this.props.selected;
-        const changeSelected = this.props.changeSelected;
+        const {titles, selected, changeSelected} = this.props;
 
         return (
             <header>
                 <ul className="movie-list">
-                    {movieTites.map((title, index) => (
+                    {titles.map((title, index) => (
                         <li
                             key={index}
                             className={
-                                index == selected
-                                    ? 'selected movie-title'
-                                    : 'movie-title'
+                                'movie-title ' +
+                                (index == selected ? 'selected ' : '')
                             }
                             onClick={() => changeSelected(index)}
                         >

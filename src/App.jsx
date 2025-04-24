@@ -8,9 +8,10 @@ class App extends Component {
     state = {
         selected: 1,
         studio: {
-            address: 'Ukraine, Kyiv',
+            address: 'Ukraine, Beresteiskyi Ave, 44, Kyiv',
             email: 'swoots@dev.co',
             phone: '+380981231231',
+            copyright: '2025',
         },
         movies: [
             {
