@@ -13,7 +13,7 @@ export class Header extends Component {
                             key={index}
                             className={
                                 'movie-title ' +
-                                (index == selected ? 'selected ' : '')
+                                (index === selected ? 'selected ' : '')
                             }
                             onClick={() => changeSelected(index)}
                         >
